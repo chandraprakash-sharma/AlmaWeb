@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--    include <head> part-->
+    <%- include('partials/head'); %>
+</head>
+<body>
+<header class="border-bottom">
+    <%- include('partials/navbar')%>
+</header>
+<section class="container-fluid mb-5">
+    <h1 class="text-center mt-5 text-success">Login</h1>
+    <div class="row pt-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 col-sm-12">
+            <div class="login-form text-center">
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="btn btn-group">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div><br>
+                    <a href="#" class="btn-link">Forgot Password</a>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</section>
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

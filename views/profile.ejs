@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+</head>
+<body>
+    <nav class="navbar p-3">
+        <h2 class="website-name mx-auto font-weight-lighter text-light">
+            <a href="/" class="text-white nav-link">AlmaWeb</a>
+        </h2>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark hvr-underline-from-center" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger hvr-underline-from-center" href="/users/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="card w-100 h-100">
+                    <img class="card-img-top p-3 rounded-circle" src="/images/cp.jpg" alt="Card image cap">
+                    <hr>
+                    <div class="card-body text-center ">
+                        <h5 class="card-title">Chandra Prakash Sharma </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card  h-100">
+                        <div class="card-header text-center">
+                         Profile
+                        </div>
+                        <div class="card-body table-responsive w-100">
+                           <table class="table table-bordered">
+                               <tbody>
+                                   <tr>
+                                       <th scope="col">About:</th>
+                                       <td>Software Engineer</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">College:</th>
+                                       <td>MBM Engineering College, Jodhpur</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">Branch / Course:</th>
+                                       <td>Master of Computer Application</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">Year:</th>
+                                       <td>2018-21</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">LinkedIn:</th>
+                                       <td>chandraprakash-sharma</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">Email:</th>
+                                       <td>cpsharma996@gmail.com</td>
+                                   </tr>
+                                   <tr>
+                                       <th scope="col">Contact:</th>
+                                       <td>+91-12345-12345  </td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                        </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Edit</button>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade mt-5" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-5">
+                    <form action="/register" method="get">
+                        <div class="form-group ">
+                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" required placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="about" required placeholder="About">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="college" required placeholder="College">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="college" required placeholder="Branch / Course">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="college" required placeholder="Year">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="college" required placeholder="Contact">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="college" required placeholder="LinkedIn">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
